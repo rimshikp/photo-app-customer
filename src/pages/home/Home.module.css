@@ -1,0 +1,210 @@
+.pageContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+  margin-top: 64px;
+}
+
+.heroSection {
+  margin-bottom: 2rem;
+}
+
+.heroTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+  color: #000;
+}
+
+.filterButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: var(--filter-bg);
+  color: var(--text-muted);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterButton:hover {
+  background-color: var(--filter-hover);
+}
+
+.activeFilter {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+
+.loadingSpinner {
+  width: 3rem;
+  height: 3rem;
+  border: 0.25rem solid var(--primary-color);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.emptyStateIllustration {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.cameraIcon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: #6c757d;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.photoPlaceholder {
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photoPlaceholder:nth-child(2) {
+  top: 40px;
+  left: 0;
+  transform: rotate(-5deg);
+}
+
+.photoPlaceholder:nth-child(3) {
+  top: 35px;
+  left: 50px;
+  transform: rotate(2deg);
+  z-index: 2;
+}
+
+.photoPlaceholder:nth-child(4) {
+  top: 45px;
+  left: 100px;
+  transform: rotate(5deg);
+}
+
+.emptyStateTitle {
+  font-size: 1.8rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.emptyStateMessage {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.resetFiltersButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.resetFiltersButton:hover {
+  background-color: #3182ce;
+  transform: translateY(-1px);
+}
+
+.searchTips {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f1f3f5;
+  border-radius: 6px;
+}
+
+@media (min-width: 640px) {
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .photoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* CSS Variables */
+:root {
+  --page-bg: #fff;
+  --text-muted: #a0aec0;
+  --filter-bg: #2d3748;
+  --filter-hover: #4a5568;
+  --primary-color: #4299e1;
+}
