@@ -1,0 +1,495 @@
+.container {
+  padding: 2rem;
+  background-color: #05181e;
+  min-height: calc(100vh - 80px);
+  color: white;
+}
+
+.galleryHeader {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.searchForm {
+  flex: 1;
+  max-width: 500px;
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.3);
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(100, 108, 255, 0.2);
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filterButton:hover {
+  background: rgba(100, 108, 255, 0.3);
+}
+
+.filterPanel {
+  background: #1a2b32;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filterGroup label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.filterInput {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+}
+
+.priceRange {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.priceInput {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.filterActions {
+  display: flex;
+  gap: 1rem;
+  align-self: flex-end;
+}
+
+.applyButton {
+  padding: 0.75rem 1.5rem;
+  background: #646cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.applyButton:hover {
+  background: #535bf2;
+}
+
+.resetButton {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.resetButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.galleryItem {
+  aspect-ratio: 4/3;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.galleryItem:hover {
+  transform: translateY(-5px);
+}
+
+.photoContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.photoContainer:hover .photo {
+  transform: scale(1.05);
+}
+
+.photoOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photoContainer:hover .photoOverlay {
+  opacity: 1;
+}
+
+.photoInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.eventName {
+  font-weight: bold;
+}
+
+.price {
+  background: rgba(100, 108, 255, 0.8);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.photoActions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.likeButton,
+.cartButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.likeButton {
+  background: rgba(255, 107, 107, 0.8);
+  color: white;
+}
+
+.likeButton:hover {
+  background: rgba(255, 107, 107, 1);
+}
+
+.cartButton {
+  background: rgba(46, 204, 113, 0.8);
+  color: white;
+}
+
+.cartButton:hover {
+  background: rgba(46, 204, 113, 1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.paginationButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginationButton:hover:not(:disabled) {
+  background: rgba(100, 108, 255, 0.5);
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationButton.active {
+  background: #646cff;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightboxContent {
+  background: #101f23;
+  border-radius: 12px;
+  max-width: 1200px;
+  width: 100%;
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+  position: relative;
+}
+
+.closeLightbox {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.closeLightbox:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightboxImageContainer {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightboxImage {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.lightboxInfo {
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.lightboxInfo h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.lightboxPrice {
+  font-size: 1.25rem;
+  color: #646cff;
+  margin: 1rem 0;
+}
+
+.lightboxDescription {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.lightboxActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.lightboxLikeButton,
+.lightboxBuyButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.lightboxLikeButton {
+  background: rgba(255, 107, 107, 0.8);
+  color: white;
+}
+
+.lightboxLikeButton:hover {
+  background: rgba(255, 107, 107, 1);
+}
+
+.lightboxBuyButton {
+  background: #646cff;
+  color: white;
+}
+
+.lightboxBuyButton:hover {
+  background: #535bf2;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 300px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(100, 108, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #646cff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.empty {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.error {
+  background: rgba(255, 107, 107, 0.1);
+  color: #ff6b6b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .lightboxContent {
+    grid-template-columns: 1fr;
+    max-height: 80vh;
+  }
+
+  .lightboxImageContainer {
+    height: 50vh;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .photoOverlay {
+    padding: 0.5rem;
+    opacity: 1;
+  }
+
+  .photoActions {
+    display: none;
+  }
+}

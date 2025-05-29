@@ -1,0 +1,197 @@
+.pageContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+  margin-top: 64px;
+}
+
+.heroSection {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+  color: #000;
+  font-size: 1.1rem;
+}
+
+.profileContainer {
+  /* background-color: rgb(30 58 138); */
+  border-radius: 12px;
+  padding: 2rem;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.profileForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.avatarSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.avatarWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatarImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.avatarPlaceholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #4a5568;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--primary-color);
+}
+
+.avatarIcon {
+  font-size: 3rem;
+  color: #cbd5e0;
+}
+
+.uploadButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #4a5568;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.uploadButton:hover {
+  background-color: var(--primary-color);
+}
+
+.fileInput {
+  display: none;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.inputIcon {
+  color: var(--primary-color);
+  width: 1rem;
+}
+
+.formInput {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #4a5568;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.formInput:disabled {
+  background-color: #fff;
+  color: #000;
+  cursor: not-allowed;
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(30 58 138);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+.saveButton:hover {
+  background-color: #3182ce;
+}
+
+.saveButton:disabled {
+  background-color: #4a5568;
+  cursor: not-allowed;
+}
+
+.buttonSpinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.successMessage {
+  padding: 0.75rem 1rem;
+  background-color: #48bb78;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+:root {
+  --page-bg: #fff;
+  --text-muted: #a0aec0;
+  --primary-color: #4299e1;
+}

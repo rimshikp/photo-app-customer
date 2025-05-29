@@ -1,0 +1,451 @@
+.card {
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cardSelected {
+  border: 2px solid var(--primary-color);
+}
+
+.selectedBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  font-size: 12px;
+}
+
+.imageContainer {
+  position: relative;
+  height: 16rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.actionsOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem;
+}
+
+.topActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.bottomActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.price {
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.actionButton {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: rgba(26, 32, 44, 0.7);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  transform: scale(1.1);
+}
+
+.favoriteActive {
+  color: var(--danger-color);
+}
+
+.likeActive {
+  color: var(--danger-color);
+}
+
+.purchaseButton {
+  background-color: var(--success-color);
+}
+
+.viewButton {
+  background-color: var(--primary-color);
+}
+
+.downloadButton {
+  background-color: var(--info-color);
+}
+
+.selectCheckbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  margin-top: 8px;
+  accent-color: var(--primary-color);
+}
+
+.content {
+  padding: 1rem;
+  background: var(--card-content-bg);
+}
+
+.title {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photographer {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.75rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.event {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background-color: rgba(66, 153, 225, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.ratingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.star {
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.starFilled {
+  color: var(--rating-color);
+}
+
+.starEmpty {
+  color: var(--text-muted);
+}
+
+.ratingText {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-left: 0.25rem;
+}
+
+.likesContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  height: 20px;
+}
+
+.likedUsers {
+  display: flex;
+  position: relative;
+  height: 24px;
+}
+
+.userAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--card-content-bg);
+  object-fit: cover;
+  position: absolute;
+}
+
+.userAvatar:nth-child(1) {
+  left: 0;
+}
+
+.userAvatar:nth-child(2) {
+  left: 12px;
+}
+
+.userAvatar:nth-child(3) {
+  left: 24px;
+}
+
+.likesCount {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.imageViewerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.imageViewer {
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.viewerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--card-content-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.closeViewer {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeViewer:hover {
+  color: white;
+}
+
+.viewerImageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.viewerImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.25rem;
+}
+
+.viewerFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--card-content-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.viewerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.viewerPhotographer {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.viewerEvent {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.viewerPrice {
+  color: white;
+  font-weight: 600;
+}
+
+.viewerActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.viewerDownloadButton,
+.viewerPurchaseButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.viewerDownloadButton {
+  background-color: var(--info-color);
+  color: white;
+}
+
+.viewerPurchaseButton {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.viewerDownloadButton:hover,
+.viewerPurchaseButton:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.ratingModal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.modalStars {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.modalStar {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modalCancel,
+.modalSubmit {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.modalCancel {
+  background-color: #f0f0f0;
+}
+
+.modalSubmit {
+  background-color: #4299e1;
+  color: white;
+}
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+:root {
+  --card-bg: #2d3748;
+  --card-content-bg: #1d2943;
+  --danger-color: #fc8181;
+  --success-color: #48bb78;
+  --primary-color: #4299e1;
+  --info-color: #0bc5ea;
+  --text-muted: #a0aec0;
+  --rating-color: #f6e05e;
+}

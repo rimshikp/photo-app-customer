@@ -1,0 +1,178 @@
+.footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.logoContainer img {
+  height: 40px;
+}
+.logoIcon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+
+.link {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: white;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialLink {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: white;
+}
+
+.newsletterText {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.newsletterForm {
+  display: flex;
+}
+
+.newsletterInput {
+  flex: 1;
+  /* background-color: var(--input-bg); */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem 0 0 0.25rem;
+  outline: none;
+}
+
+.newsletterInput::placeholder {
+  color: var(--text-muted);
+}
+
+.newsletterButton {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newsletterButton:hover {
+  background-color: var(--primary-hover);
+}
+
+.bottomSection {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .bottomSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.copyright {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legalLink {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.legalLink:hover {
+  color: white;
+}
+:root {
+  --footer-bg: rgb(30 58 138);
+  --primary-color: #4299e1;
+  --primary-hover: #3182ce;
+  --text-muted: #a0aec0;
+  --input-bg: #2d3748;
+  --border-color: #4a5568;
+}
