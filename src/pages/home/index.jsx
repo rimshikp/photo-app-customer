@@ -35,7 +35,7 @@ const Home = () => {
     dispatch(resetGallery());
 
     setIsLoading(true);
-    dispatch(getHomeGallery({ limit: 3, page: 1 })).then(() => {
+    dispatch(getHomeGallery({ limit: 12, page: 1 })).then(() => {
       setIsLoading(false);
     });
   }, [dispatch]);
