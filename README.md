@@ -1,2 +1,1 @@
-
 # photo-app-customer
