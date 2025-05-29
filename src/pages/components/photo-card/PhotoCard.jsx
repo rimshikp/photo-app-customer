@@ -372,7 +372,7 @@ const PhotoCard = ({
           )}
 
           <div className={styles.bottomActions}>
-            <span className={styles.price}>${photo.price}</span>
+            <span className={styles.price}>₹{photo.price}</span>
 
             {user && (
               <div className={styles.actionButtons}>
