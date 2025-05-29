@@ -66,7 +66,7 @@ const Home = () => {
         const nextPage = page + 1;
         dispatch(
           getHomeGallery({
-            limit: 3,
+            limit: 12,
             page: nextPage,
             eventIds: filter.filter((item) => item !== "all"),
             search: searchValue,
@@ -113,7 +113,7 @@ const Home = () => {
     setPage(1);
     dispatch(
       getHomeGallery({
-        limit: 3,
+        limit: 12,
         page: 1,
         eventIds: filter.filter((item) => item !== "all"),
         search: searchValue,
@@ -132,7 +132,7 @@ const Home = () => {
     setPage(1);
     dispatch(
       getHomeGallery({
-        limit: 3,
+        limit: 12,
         page: 1,
         eventIds: filter.filter((item) => item !== "all"),
         search: searchValue,
