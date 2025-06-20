@@ -6,6 +6,7 @@ import {
   faPinterest 
 } from '@fortawesome/free-brands-svg-icons';
 import styles from './Footer.module.css';
+import WhitLogo from '../../../assets/whitelogo-work-foto.png'
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
         <div className={styles.grid}>
           <div className={styles.column}>
             <div className={styles.logoContainer}>
-               <img src="https://workalbums.com/New-logo-white.png"/>
+               <img src={WhitLogo}/>
             </div>
             <p className={styles.description}>
               The best marketplace for photographers to sell their work and for buyers to find unique images.
