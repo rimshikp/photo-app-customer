@@ -40,7 +40,7 @@ export default function Login() {
     <div className={styles.loginContainer}>
       <div className={styles.loginCard}>
         <div className={styles.logo}>
-          <img src="https://workalbums.com/New-logo-white.png" alt="Logo" />
+          <img src="https://workfotos.com/New-logo-white.png" alt="Logo" />
         </div>
         <p className={styles.loginSubtitle}>Please enter your details</p>
 
